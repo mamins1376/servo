@@ -95,6 +95,7 @@ pub fn content_process_sandbox_profile() -> Profile {
 ))]
 pub fn content_process_sandbox_profile() -> Profile {
     use embedder_traits::resources;
+    use std::path::PathBuf;
 
     let mut operations = vec![Operation::FileReadAll(PathPattern::Literal(PathBuf::from(
         "/dev/urandom",
